@@ -1,0 +1,36 @@
+.nav {
+  display: flex;
+  background: rgb(250, 66, 31);
+  background: linear-gradient(
+    90deg,
+    rgba(250, 66, 31, 1) 18%,
+    rgba(255, 213, 0, 1) 100%
+  );
+}
+
+.nav-ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  align-content: space-between;
+  flex-grow: 1;
+  padding: 0 10% 0 10%;
+  margin: 1em 0 1em 0;
+}
+
+.nav-li {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 26px;
+}
+
+.active {
+  color: white;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.inactive {
+  color: black;
+}
