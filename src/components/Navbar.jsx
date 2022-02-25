@@ -5,6 +5,8 @@ export default function Navbar() {
         <li>Celulares</li>
         <li>Televisores</li>
         <li>Consolas</li>
+        <li>Carrito</li>
+
       </ul>
     </nav>
   );
