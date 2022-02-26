@@ -1,12 +1,24 @@
-import { NavLink } from "react-router-dom";
-import "./Navbar.css";
-
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
+import { userService } from "../services/userService";
 
-// get our fontawesome imports
+import "./Navbar.css";
 
 export default function Navbar() {
+  const [user, setUser] = useState("");
+  const [productsPuchased, setProductsPuchased] = useState(0);
+  const [money, setMoney] = useState(0);
+
+  useEffect(() => {
+    let resultName = userService.getUsers();
+    setUser(resultName.firstName);
+    let resultMoney = userService.getUsers();
+    setMoney(resultMoney.credit);
+    /* let resultName = userService.getUsers();
+    setUser(resultName.firstName); */
+  }, []);
   return (
     <nav className="nav">
       <ul className="nav-ul">
@@ -28,7 +40,7 @@ export default function Navbar() {
               className={({ isActive }) => (isActive ? "active" : "inactive")}
               to="/cellphones"
             >
-              Juan Ignacio
+              {user}
             </NavLink>
           </li>
           <li className="nav-li">
@@ -37,7 +49,7 @@ export default function Navbar() {
               className={({ isActive }) => (isActive ? "active" : "inactive")}
               to="/television"
             >
-              Carrito (0)
+              <FontAwesomeIcon icon={faShoppingCart} /> {productsPuchased}
             </NavLink>
           </li>
           <li className="nav-li">
@@ -46,7 +58,7 @@ export default function Navbar() {
               className={({ isActive }) => (isActive ? "active" : "inactive")}
               to="/consoles"
             >
-              Credito: $100000
+              Credito: ${money}
             </NavLink>
           </li>
         </div>
