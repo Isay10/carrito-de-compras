@@ -10,53 +10,46 @@ export default function Navbar() {
   return (
     <nav className="nav">
       <ul className="nav-ul">
-        <li className="nav-li">
-          <NavLink
-            style={{ textDecoration: "none" }}
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-            to="/"
-          >
-            Home{" "}
-          </NavLink>
-        </li>
-
-        <li className="nav-li">
-          <NavLink
-            style={{ textDecoration: "none" }}
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-            to="/cellphones"
-          >
-            Celulares
-          </NavLink>
-        </li>
-        <li className="nav-li">
-          <NavLink
-            style={{ textDecoration: "none" }}
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-            to="/television"
-          >
-            Television
-          </NavLink>
-        </li>
-        <li className="nav-li">
-          <NavLink
-            style={{ textDecoration: "none" }}
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-            to="/consoles"
-          >
-            Consolas{" "}
-          </NavLink>
-        </li>
-        <li className="nav-li">
-          <NavLink
-            style={{ textDecoration: "none" }}
-            className={({ isActive }) => (isActive ? "active" : "inactive")}
-            to="/shoppingcart"
-          >
-            {" "}
-            <FontAwesomeIcon icon={faShoppingCart} />
-          </NavLink>
-        </li>
+        <div className="nav-home">
+          <li className="nav-li">
+            <NavLink
+              style={{ textDecoration: "none" }}
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+              to="/"
+            >
+              Tienda de productos
+            </NavLink>
+          </li>
+        </div>
+        <div className="nav-option">
+          <li className="nav-li">
+            <NavLink
+              style={{ textDecoration: "none" }}
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+              to="/cellphones"
+            >
+              Juan Ignacio
+            </NavLink>
+          </li>
+          <li className="nav-li">
+            <NavLink
+              style={{ textDecoration: "none" }}
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+              to="/television"
+            >
+              Carrito (0)
+            </NavLink>
+          </li>
+          <li className="nav-li">
+            <NavLink
+              style={{ textDecoration: "none" }}
+              className={({ isActive }) => (isActive ? "active" : "inactive")}
+              to="/consoles"
+            >
+              Credito: $100000
+            </NavLink>
+          </li>
+        </div>
       </ul>
     </nav>
   );
