@@ -1,9 +1,9 @@
 import { productsDummy } from "../dummys/products";
 
-export const userService = {
-  getProfile,
+export const productsService = {
+  getProducts,
 };
 
-async function getProfile() {
-  return productsDummy;
+function getProducts() {
+  return productsDummy.productos;
 }
