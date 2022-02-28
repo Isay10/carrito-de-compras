@@ -1,0 +1,22 @@
+.dropdown-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-label {
+  font-family: monospace;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.dropdown-select {
+  width: 10vw;
+  height: 5vh;
+  font-family: monospace;
+  font-size: 17px;
+}
+
+.dropdown-option {
+  font-family: monospace;
+  font-size: 13px;
+}
