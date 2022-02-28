@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Cellphones from "./pages/Cellphones";
+import User from "./pages/User";
 import Consoles from "./pages/Consoles";
 import HomePage from "./pages/HomePage";
 import NotFound from "./pages/NotFound";
@@ -14,7 +14,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="cellphones" element={<Cellphones />} />
+        <Route path="user" element={<User />} />
         <Route path="television" element={<Television />} />
         <Route path="consoles" element={<Consoles />} />
         <Route path="shoppingcart" element={<ShoppingCart />} />

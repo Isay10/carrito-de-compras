@@ -38,7 +38,7 @@ export default function Navbar() {
             <NavLink
               style={{ textDecoration: "none" }}
               className={({ isActive }) => (isActive ? "active" : "inactive")}
-              to="/cellphones"
+              to="/user"
             >
               {user}
             </NavLink>
@@ -47,7 +47,7 @@ export default function Navbar() {
             <NavLink
               style={{ textDecoration: "none" }}
               className={({ isActive }) => (isActive ? "active" : "inactive")}
-              to="/television"
+              to="/shopping-cart"
             >
               <FontAwesomeIcon icon={faShoppingCart} /> {productsPuchased}
             </NavLink>
@@ -56,7 +56,7 @@ export default function Navbar() {
             <NavLink
               style={{ textDecoration: "none" }}
               className={({ isActive }) => (isActive ? "active" : "inactive")}
-              to="/consoles"
+              to="/credit"
             >
               Credito: ${money}
             </NavLink>
